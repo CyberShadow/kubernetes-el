@@ -53,6 +53,7 @@ jobs:
         if: steps.install.outcome == 'success' && steps.install.conclusion == 'success'
         run: |
           make test
+          cat coverage/lcov.info
 
       - name: Coveralls
         if: steps.install.outcome == 'success' && steps.install.conclusion == 'success'
